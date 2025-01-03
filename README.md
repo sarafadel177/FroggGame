@@ -19,8 +19,8 @@ Ensure the following tools are installed on your system:
 1. *Clone the Repository*  
    Clone this repository to your local machine:
    bash
-   git clone https://github.com/your-username/frogger-opengl.git
-   cd frogger-opengl
+   git clone https://github.com/sarafadel177/FroggGame
+   cd FroggGame
    
 
 2. *Set Up OpenGL Environment*  
