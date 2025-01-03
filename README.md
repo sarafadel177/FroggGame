@@ -1,64 +1,54 @@
 
 ## 🚀 Installation
 
-To run this game on your system, follow the steps below:
+Follow these steps to set up the environment and run the Frogger game:
 
-### Prerequisites
+## Prerequisites
+1. *Operating System*: Windows 10/11 (64-bit).
+2. *Development Tools*:
+   - Microsoft Visual Studio Community 2019 or newer.
+   - A graphics card supporting OpenGL 4.3 or later (lower versions might still work with adjustments).
+3. *Libraries*:
+   - FreeGLUT
+   - GLEW
+   - GLM
 
-Ensure the following tools are installed on your system:
+## Steps to Install
 
-1. *C++ Compiler*: A compiler like g++ (part of GCC) or MSVC (Microsoft Visual C++).
-2. *OpenGL Libraries*: The OpenGL development libraries must be installed.
-3. *GLFW* and *GLAD*: If not included in the template, ensure these are installed for managing OpenGL contexts and loading OpenGL functions.
-4. *Visual Studio Code*: The game is written using a VS Code OpenGL template.
+1. *Download Visual Studio*:
+   - Download Microsoft Visual Studio Community Edition from [Visual Studio Downloads](https://my.visualstudio.com/Downloads).
+   - Install it with the "Desktop development with C++" workload.
 
----
+2. *Set Up Helper Libraries*:
+   - Create a folder named OpenGLwrappers in the C: drive: C:\OpenGLwrappers.
+   - Download and extract the following libraries into C:\OpenGLwrappers:
+     - *FreeGLUT*: [Download FreeGLUT](http://files.transmissionzero.co.uk/software/development/GLUT/older/freeglut-MSVC-2.8.1-1.mp.zip)
+     - *GLEW*: [Download GLEW](https://sourceforge.net/projects/glew/files/glew/1.10.0/glew-1.10.0-win32.zip/download)
+     - *GLM*: [Download GLM](https://github.com/g-truc/glm/releases/download/0.9.7.5/glm-0.9.7.5.zip)
 
-### Steps
+3. *Configure Windows Environment*:
+   - Copy freeglut.dll from C:\OpenGLwrappers\freeglut-MSVC-2.8.1-1.mp\freeglut\bin to C:\Windows\SysWOW64.
+   - Copy glew32.dll from C:\OpenGLwrappers\glew-1.10.0-win32\glew-1.10.0\bin\Release\Win32 to C:\Windows\SysWOW64.
+   - Ensure glu32.dll exists in C:\Windows\SysWOW64. If missing, search online for resources to add it.
 
-1. *Clone the Repository*  
-   Clone this repository to your local machine:
-   bash
-   git clone https://github.com/sarafadel177/FroggGame
-   cd FroggGame
-   
+4. *Set Up Visual Studio Project*:
+   - Configure the project to include library paths:
+     - Add the following include directories:
+       
+       C:\OpenGLwrappers\freeglut-MSVC-2.8.1-1.mp\freeglut\include
+       C:\OpenGLwrappers\glew-1.10.0-win32\glew-1.10.0\include
+       C:\OpenGLwrappers\glm-0.9.7.5\glm
+       
+     - Add the following library directories:
+       
+       C:\OpenGLwrappers\freeglut-MSVC-2.8.1-1.mp\freeglut\lib
+       C:\OpenGLwrappers\glew-1.10.0-win32\glew-1.10.0\lib\Release\Win32
+       
+     - Add the following additional dependencies:
+       
+       glew32.lib
+       opengl32.lib
+       
 
-2. *Set Up OpenGL Environment*  
-   Depending on your operating system:
-
-   #### *Windows*
-   - Install *MinGW* or *MSVC* for compiling C++ code.
-   - Download and configure the necessary OpenGL libraries (GLFW, GLAD, GLU, etc.).
-   - Ensure all library files (e.g., glfw3.lib, opengl32.lib) are linked in your build process.
-
-   #### *Linux*
-   - Install OpenGL and GLFW:
-     bash
-     sudo apt update
-     sudo apt install build-essential libglfw3-dev libgl1-mesa-dev
-     
-
-   #### *MacOS*
-   - Install dependencies using Homebrew:
-     bash
-     brew install glfw
-     
-
-3. *Build the Project*  
-   Open the project folder in Visual Studio Code and ensure the VS Code OpenGL template is correctly configured.
-
-   If you're using a *Makefile*:
-   bash
-   make
-   
-
-   Or compile manually with:
-   bash
-   g++ -o frogger main.cpp -lGL -lGLU -lglfw
-   
-
-4. *Run the Game*  
-   After successful compilation, run the executable:
-   bash
-   ./frogger
-   
+5. *Build and Run*:
+   - Open the project in Visual Studio, build it, and run the executable to play the Frogger game.
