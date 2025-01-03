@@ -1,4 +1,29 @@
+# Frogger Game with Menu
 
+## 🐸 Introduction
+
+This is a *Frogger-inspired game* . The player controls a frog that must navigate through obstacles to reach the other side safely. The game includes:
+
+- A *main menu* to start or exit the game.
+- Intuitive *WASD controls* for movement.
+- Challenging gameplay inspired by the classic Frogger.
+
+## 🎮 Features
+
+- *Interactive Menu*: Easily start the game or exit through the main menu.
+- *Simple Controls*: Move your character using the W, A, S, and D keys.
+- *Classic Gameplay*: Dodge obstacles, time your moves, and aim to reach the goal!
+
+## 🕹️ How to Play
+
+1. *Start the Game*: Use the menu to start the game.
+2. *Move the Frog*:
+   - *W*: Move up.
+   - *A*: Move left.
+   - *S*: Move down.
+   - *D*: Move right.
+   - or with the arrows
+3. *Goal*: Safely guide the frog to the other side while avoiding obstacles.
 ## 🚀 Installation
 
 Follow these steps to set up the environment and run the Frogger game:
